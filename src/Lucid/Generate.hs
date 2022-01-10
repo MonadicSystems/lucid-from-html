@@ -211,7 +211,8 @@ getImports =
     [ "{-# LANGUAGE OverloadedStrings, ExtendedDefaultRules #-}"
     , ""
     , "import Lucid"
-    , "import Lucid.Supplemental"
+    , "import Lucid.HTMX"
+    , "import Lucid.Supplemental hiding (svg_)"
     ]
 
 

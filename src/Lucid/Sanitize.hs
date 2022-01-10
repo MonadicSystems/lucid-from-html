@@ -21,16 +21,16 @@ import Lucid.Supplemental (svgCamelCaseAttrs)
 --
 sanitize :: String -> String
 sanitize str
-  | ("data-" `isPrefixOf` lower) = lower
+  | ("data-" `isPrefixOf` lower) = appendUnderscore lower
   -- begin hack for svg
-  | (str `elem` svgCamelCaseAttrs) = str
+  | (str `elem` svgCamelCaseAttrs) = appendUnderscore str
   | (':' `elem` str)                     
     = appendUnderscore $ removeColon lower
   -- end hack for svg
   | otherwise 
     = appendUnderscore $ removeDash lower
   where
-    lower = map toLower str
+    lower = lowerize str
 
     -- Remove a dash, replacing it by camelcase notation
     --

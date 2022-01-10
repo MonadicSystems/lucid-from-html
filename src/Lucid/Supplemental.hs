@@ -3,9 +3,10 @@
 -- | Supplemental to Html5 terms.
 -- Some of them are obsolete or deprecated but still used in real pages.
 
-module Lucid.Supplemental where
+module Lucid.Supplemental (module Lucid.HTMX, module Lucid.Supplemental) where
 
 import           Lucid.Base
+import           Lucid.HTMX
 import           Data.Text (Text)
 
 ----- List of tags and attributes, don't forget to add here if
@@ -22,6 +23,7 @@ leafElements =
   [ "relative-time", "time-until"
   , "time-ago", "local-time"
   , "g:plusone"
+  , "path"
   ]
 
 -- | attributes
@@ -46,6 +48,17 @@ attributeElements =
   , "align"
   , "itemscope"
   , "itemtype"
+  , "fill"
+  , "stroke"
+  , "stroke-linecap"
+  , "stroke-linejoin"
+  , "stroke-width"
+  , "d"
+  -- htmx attributes
+  , "hx-get"
+  , "hx-include"
+  , "hx-put"
+  , "hx-target"
   ]
 -- hack for svg
   ++ svgAttrs ++ svgCamelCaseAttrs
@@ -86,7 +99,8 @@ localTime_ = with (makeElementNoEnd "local-time")
 gPlusone_ :: Monad m => [Attribute] -> HtmlT m ()
 gPlusone_ = with (makeElementNoEnd "g:plusone")
 
-
+path_ :: Monad m => [Attribute] -> HtmlT m ()
+path_ = with (makeElementNoEnd "path")
 
 ------ Attributes --------------------------
 --------------------------------------------
@@ -221,6 +235,23 @@ language_ = makeAttribute "language"
 align_ :: Text -> Attribute
 align_ = makeAttribute "align"
 
+fill_ :: Text -> Attribute
+fill_ = makeAttribute "fill"
+
+stroke_ :: Text -> Attribute
+stroke_ = makeAttribute "stroke"
+
+strokeLinecap_ :: Text -> Attribute
+strokeLinecap_ = makeAttribute "stroke-linecap"
+
+strokeLinejoin_ :: Text -> Attribute
+strokeLinejoin_ = makeAttribute "stroke-linejoin"
+
+strokeWidth_ :: Text -> Attribute
+strokeWidth_ = makeAttribute "stroke-width"
+
+d_ :: Text -> Attribute
+d_ = makeAttribute "d"
 
 ------------ Svg attributes, remove when fix !!!! -----
 

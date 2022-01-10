@@ -10,13 +10,14 @@ maintainer: alogic0@gmail.com
 license: BSD3
 github: alogic0/lucid-from-html
 dependencies:
-- base >=4 && <5
-- containers >=0.3
-- directory >=1.0
-- filepath >=1.1
-- tagsoup >=0.14.1
-- text >= 0.11
-- lucid >= 2.9.9
+- base
+- containers
+- directory
+- filepath
+- tagsoup
+- text
+- lucid
+- lucid-htmx >= 0.1.0.4
 extra-source-files:
 - CHANGELOG.md
 - README.md
