@@ -33,6 +33,7 @@ attributeElements =
   , "aria-label", "autocapitalize"
   , "aria-expanded", "aria-haspopup"
   , "aria-labelledby", "aria-describedby"
+  , "aria-controls"
   , "as"
   , "border", "cellpadding", "cellspacing"
   , "frameborder"
@@ -128,6 +129,9 @@ ariaLabelledby_ = makeAttribute "aria-labelledby"
 -- | The @aria-describedby@ attribute for svg.
 ariaDescribedby_ :: Text -> Attribute
 ariaDescribedby_ = makeAttribute "aria-describedby"
+
+ariaControls_ :: Text -> Attribute
+ariaControls_ = makeAttribute "aria-controls"
 
 -- | The @as@ attribute
 as_ :: Text -> Attribute
