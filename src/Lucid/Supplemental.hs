@@ -51,6 +51,7 @@ attributeElements =
   , "itemscope"
   , "itemtype"
   , "fill"
+  , "fill-rule"
   , "stroke"
   , "stroke-linecap"
   , "stroke-linejoin"
@@ -248,6 +249,9 @@ align_ = makeAttribute "align"
 
 fill_ :: Text -> Attribute
 fill_ = makeAttribute "fill"
+
+fillRule_ :: Text -> Attribute
+fillRule_ = makeAttribute "fill-rule"
 
 stroke_ :: Text -> Attribute
 stroke_ = makeAttribute "stroke"
