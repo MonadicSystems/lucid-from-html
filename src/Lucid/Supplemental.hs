@@ -33,7 +33,7 @@ attributeElements =
   , "aria-label", "autocapitalize"
   , "aria-expanded", "aria-haspopup"
   , "aria-labelledby", "aria-describedby"
-  , "aria-controls"
+  , "aria-controls", "aria-current"
   , "as"
   , "border", "cellpadding", "cellspacing"
   , "frameborder"
@@ -132,6 +132,9 @@ ariaDescribedby_ = makeAttribute "aria-describedby"
 
 ariaControls_ :: Text -> Attribute
 ariaControls_ = makeAttribute "aria-controls"
+
+ariaCurrent_ :: Text -> Attribute
+ariaCurrent_ = makeAttribute "aria-current"
 
 -- | The @as@ attribute
 as_ :: Text -> Attribute
