@@ -34,6 +34,7 @@ attributeElements =
   , "aria-expanded", "aria-haspopup"
   , "aria-labelledby", "aria-describedby"
   , "aria-controls", "aria-current"
+  , "aria-orientation"
   , "as"
   , "border", "cellpadding", "cellspacing"
   , "frameborder"
@@ -135,6 +136,9 @@ ariaControls_ = makeAttribute "aria-controls"
 
 ariaCurrent_ :: Text -> Attribute
 ariaCurrent_ = makeAttribute "aria-current"
+
+ariaOrientation_ :: Text -> Attribute
+ariaOrientation_ = makeAttribute "aria-orientation"
 
 -- | The @as@ attribute
 as_ :: Text -> Attribute
