@@ -63,6 +63,8 @@ attributeElements =
   , "hx-include"
   , "hx-put"
   , "hx-target"
+  -- _hyperscript
+  , "_"
   ]
 -- hack for svg
   ++ svgAttrs ++ svgCamelCaseAttrs
@@ -272,8 +274,10 @@ strokeWidth_ = makeAttribute "stroke-width"
 d_ :: Text -> Attribute
 d_ = makeAttribute "d"
 
------------- Svg attributes, remove when fix !!!! -----
+__ :: Text -> Attribute
+__ = makeAttribute "_"
 
+------------ Svg attributes, remove when fix !!!! -----
 
 -- | The @version@ attribute for svg.
 version_ :: Text -> Attribute

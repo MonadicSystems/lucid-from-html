@@ -17,7 +17,7 @@ dependencies:
 - tagsoup
 - text
 - lucid
-- lucid-htmx >= 0.1.0.4
+- lucid-htmx 
 extra-source-files:
 - CHANGELOG.md
 - README.md
